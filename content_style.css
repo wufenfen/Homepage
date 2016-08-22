@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+
+body  
+{
+	text-align:center;
+	font-family:"Comic Sans MS";
+	font-size:20px;
+	color:#666;
+}
+ 
+ 
+
+img.head
+{
+width:1000px;
+height:230px;
+ 
+z-index:-1;
+}
+
+
+ul.menu
+{
+list-style-type:none;
+margin:0px;
+text-align:center;
+}
+
+
+li.menu{  display: inline;}
+li.menu + li.menu {margin-left:30px;}
+
+h1.head {Position:absolute; left:100px; top:50px; text-transform:uppercase;font-size:60px;color:black; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+
+
+h1.content {color: #F06}
+h2.news {padding-left:20px; color:#9F0}
+div#container{width:1000px; margin:0px auto;text-align:left;}
+div#header {height:230px;}
+div#menu {margin-top:20px; background:#FF8080;text-align:center;}
+div#image {height:300px; margin-bottom:20px;}
+div#content { width:690px; float:left; border-style:dashed none;;border-color:pink}
+div#accessary {width:290px; height:300px; float:left;border-style:dashed;border-color:pink}
+div#footer {background-color:#ffff99; clear:both; text-align:center;}
+
+
+a:hover,a:active
+{
+color:#F06;
+text-decoration:underline;
+}
+
+
+.tag
+{
+font-weight:bold;
+font-family:"Comic Sans MS";
+font-size: 30px;
+text-decoration:none;
+text-transform:uppercase;
+color:white;
+}
+ 
+
+div.column
+{
+ 
+	height: 400px;
+	width: 660px;
+	float:left;
+	clear:both;
+	border-style:double;
+	border-color:#F60;
+	margin-top:20px;
+	padding-left:20px;
+	text-align:center;
+}
+
+img+img.gap {margin-left:50px}
+
+
+table
+  {
+    border-collapse:collapse;
+    text-align:center;
+  }
+
+table,th, td
+  {
+  border: solid  pink;
+  }
+
+	
+img.award 
+{
+	border: black solid 1px;
+	height:150px;
+	width:200px;
+	float: left;
+	margin:5px;
+}
+
+img.friends
+{
+	border: black solid 1px;
+	height:250px;
+	width:200px;
+	float: left;
+	margin:5px;
+}
+
+p.text
+{ 
+   text-align:left;
+}
+
+
+
+p.out
+{
+  text-align: 2em;
+}
+
+img.right
+{
+   height: 200px; 
+   float:right;
+   margin-left: 8px;	
+   margin-right: 8px;
+   padding: 5px;
+   border: groove  #6C3;
+}
+
+img.left
+{
+   height: 200px; 
+   float:left;	
+   margin-left: 8px;
+   margin-right:8px;
+   padding: 5px;
+   border: groove  #6C3;
+}

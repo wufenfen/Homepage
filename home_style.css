@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {font-size:24px;
+font-family:"Comic Sans MS", cursive
+}
+
+img.tag
+ {
+	border="0";
+    width="90";
+    height="40";
+}
+	
+ul
+{
+list-style-type:none;
+margin-top:40px;
+padding:40px;
+}
+
+li + li 
+{
+	margin-top:25px;
+	}
+a.tag:link,a.tag:visited
+{
+display:block;
+font-weight:bold;
+width:170px;
+text-align:center;
+padding:4px;
+font-family:"Comic Sans MS";
+font-size: 30px;
+text-decoration:none;
+text-transform:uppercase;
+}
+
+ 
+a.tag:link, a.tag:visited{color: #F90}
+
+
+a.tag:hover,a.tag:active
+{
+   background-color:#C6C;
+ 
+}
+
+a.normal:link, a.normal:visited{color:#F90}
+div#menu {width:250px;float:right;}
+div#content 
+{	
+	margin-top:70px;
+	border:double,blue,5px;
+	overflow:auto;
+	height:430px;width:570px;
+	float:right;
+	padding:5px;
+}
+
+p.white
+{
+	color: #C6C;
+    text-indent:50px;
+}
+
+span.motto
+{
+	font-size:30px;
+	color: #FC3  ;
+	text-decoration: underline;	
+}
