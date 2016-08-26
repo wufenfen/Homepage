@@ -1,0 +1,40 @@
+{
+    "comment":"个人主页",
+    "version": "1.0.0",
+    "product": "Homepage",
+    "contextPath": "",
+    "port": 8021,
+    "hostname" : "localhost",
+    "openurl" : "http://localhost:8021/index.html",
+    "webapp": "src/main/webapp",
+    "mock" : "src/test/mock",
+    "scssPath" : "/styles/scss",
+    "cssPath" : "/styles/css",
+    "imgPath" : "/images",
+    "jsPath" : "/scripts",
+    "fontPath" : "/fonts",
+    "swfPath" : "/swf",
+    "htmlPath" : "",
+    "templatePath" : "/WEB-INF/tmpl",
+    "build": "build",
+    "buildWebapp" : "/app",
+    "buildStatic" : "/mimg",
+    "dependProjects" : [],
+    "tmpDir" : ".tmp",
+    "staticVersion" : "/20160314",
+    "projectConfigFile" : "",
+    "projectDistConfigFile" : "",
+    "ajaxPrefix" : "/sky",
+    "mimgPathPrefix" : "/hxm",
+    "mimgURLPrefix" : {
+        "develop": "http://localhost:8021/hxm",
+        "online": "//nos.netease.com/mailpub/hxm",
+        "test": "//nos.netease.com/mailpub/hxm"
+    },
+    "deploy": {
+        "webapp":"/home/wpd/deploy/dashi-deploy/deploy/sky-hotfix",
+        "static":"/home/wpd/deploy/pages",
+        "account": "deployer",
+        "password": "SU42HVeK"
+    }
+}
