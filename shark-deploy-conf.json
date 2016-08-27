@@ -24,17 +24,5 @@
     "staticVersion" : "/20160314",
     "projectConfigFile" : "",
     "projectDistConfigFile" : "",
-    "ajaxPrefix" : "/sky",
-    "mimgPathPrefix" : "/hxm",
-    "mimgURLPrefix" : {
-        "develop": "http://localhost:8021/hxm",
-        "online": "//nos.netease.com/mailpub/hxm",
-        "test": "//nos.netease.com/mailpub/hxm"
-    },
-    "deploy": {
-        "webapp":"/home/wpd/deploy/dashi-deploy/deploy/sky-hotfix",
-        "static":"/home/wpd/deploy/pages",
-        "account": "deployer",
-        "password": "SU42HVeK"
-    }
+    "ajaxPrefix" : "/xhr"
 }
