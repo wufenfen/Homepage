@@ -1,9 +1,11 @@
-html, body {
+html,
+body {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  min-width: 1200px; }
 
 body > div {
-  height: 600px; }
+  height: 800px; }
 
 .navFixed {
   position: fixed;
@@ -11,18 +13,27 @@ body > div {
   left: 0;
   right: 0; }
 
-div.g-focus {
+.hover, div.g-nav .m-nav nav li a:hover {
+  color: blue !important; }
+
+div.g-cover {
   height: 100%;
   background-color: #5bf0b0; }
 
+#blank {
+  visibility: hidden;
+  height: 64px; }
+
 div.g-nav {
-  height: 60px;
-  line-height: 60px;
+  height: 64px;
+  line-height: 64px;
   background-color: #f38d29;
   color: white; }
   div.g-nav .m-nav {
-    width: 80%;
-    margin: 0 auto; }
+    width: 60%;
+    min-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; }
     div.g-nav .m-nav .name {
       float: left;
       font-size: 20px;
@@ -36,9 +47,11 @@ div.g-nav {
         display: inline-block;
         margin-left: 40px; }
         div.g-nav .m-nav nav li a {
+          display: inline-block;
           text-transform: uppercase;
           text-decoration: none;
           color: white;
+          line-height: 64px;
           letter-spacing: 1px; }
 
 div.g-services {

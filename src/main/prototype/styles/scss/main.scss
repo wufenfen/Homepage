@@ -1,81 +1,98 @@
-
-html, body{
-	height:100%;
-	width:100%;
+html,
+body {
+    height: 100%;
+    width: 100%;
+    min-width: 1200px;
 }
 
-body > div {	
-	height:600px; 
+body > div {
+    height: 800px;
 }
 
 .navFixed {
-	position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
 
-div.g-focus {
-	height: 100%;
-	background-color: #5bf0b0; 
+.hover {
+	color: blue !important;
+}
 
+div.g-cover {
+    height: 100%;
+    background-color: #5bf0b0;
+}
+
+$barHeight: 64px;
+
+#blank{
+	visibility: hidden;
+	height: $barHeight;
 }
 
 div.g-nav {
-	height: 60px;
-	line-height: 60px;
-	background-color: #f38d29;
-	color: white;
-	.m-nav{
-		width: 80%;
-		margin: 0 auto;
-		.name {
-			float: left;
-			font-size: 20px;
-			font-weight: bold;
-			letter-spacing: 1px;
-			a{
-				color: white;
-			}
-		}
-		nav{
-		    float: right;
+    height: $barHeight;
+    line-height: $barHeight;
+    background-color: #f38d29;
+    color: white;
+    .m-nav {
+        width: 60%;
+        min-width: 1000px;
+        margin: 0 auto;
+        overflow: hidden;
+        .name {
+            float: left;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            a {
+                color: white;
+            }
+        }
+        nav {
+            float: right;
+            li {
+                display: inline-block;
+                margin-left: 40px;
+                a {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: white;
+                    line-height: 64px;
+                    letter-spacing: 1px;
 
-		    li{
-				display: inline-block;
-				margin-left: 40px;
-				a{
-					text-transform: uppercase;
-					text-decoration: none;
-					color:white;
-					letter-spacing: 1px;
-				}
-		    }
-		}
-	}
+                    &:hover{
+                    	@extend .hover;
+                    }
+                }
+            }
+        }
+    }
 }
 
-div.g-services{
-	background-color: #edc896;
+div.g-services {
+    background-color: #edc896;
 }
 
-div.g-portfolio{
-	background-color: pink;
+div.g-portfolio {
+    background-color: pink;
 }
 
-
-div.g-skills{
-	background-color: #7dc9eb;
+div.g-skills {
+    background-color: #7dc9eb;
 }
 
-div.g-resume{
-	background-color: #fddbac;
+div.g-resume {
+    background-color: #fddbac;
 }
 
-div.g-testimonials{
-	background-color: #ceeb57;
+div.g-testimonials {
+    background-color: #ceeb57;
 }
 
-div.g-contact{
-	background-color: #c995eb;
+div.g-contact {
+    background-color: #c995eb;
 }
