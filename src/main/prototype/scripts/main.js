@@ -33,7 +33,7 @@ $(document).ready(function(){
 		highlightNar();
 	})
 
-	$('.m-nav').click(function(e){
+	$('.m-nav, .m-cover').click(function(e){
 		var href = e.target.href;
 		if( href){
 			var id= href.split('#')[1];

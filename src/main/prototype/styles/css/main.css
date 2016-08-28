@@ -18,7 +18,38 @@ body > div {
 
 div.g-cover {
   height: 100%;
-  background-color: #5bf0b0; }
+  background: url("../../images/intro-bg.jpg") center no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  div.g-cover .m-cover {
+    width: 70%;
+    height: 100%;
+    display: table;
+    text-align: center;
+    font-family: 'Lato', sans-serif; }
+    div.g-cover .m-cover .m-cover-text {
+      display: table-cell;
+      vertical-align: middle; }
+    div.g-cover .m-cover .u-intro {
+      font-size: 70px;
+      font-weight: 600;
+      letter-spacing: -2px;
+      color: #2c3e50;
+      line-height: 1; }
+    div.g-cover .m-cover .u-title {
+      margin-bottom: 40px;
+      margin-top: 20px;
+      color: #76818d;
+      font-size: 20px; }
+    div.g-cover .m-cover .u-btn {
+      margin: 0 10px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      border: 1px solid #76818d;
+      background-color: transparent;
+      color: #76818d;
+      line-height: 1.3333333;
+      font-size: 16px; }
 
 #blank {
   visibility: hidden;
