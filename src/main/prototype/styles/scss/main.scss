@@ -3,11 +3,18 @@ body {
     height: 100%;
     width: 100%;
     min-width: 1200px;
+    color: #616e7c;
 }
 
 body > div {
     height: 800px;
+    padding: 80px 0;
+    text-align: center;
 }
+
+$colorTone: #2c3e50;
+$subColor: #E87E04;
+$barHeight: 64px;
 
 .navFixed {
     position: fixed;
@@ -17,20 +24,26 @@ body > div {
 }
 
 .hover {
-	color: blue !important;
+    color: $subColor !important;
 }
+
+
+#blank{
+    padding: 0;
+    display: none;
+    height: $barHeight;
+} 
 
 div.g-cover {
     height: 100%;
+    padding: 0;
     background: url('../../images/intro-bg.jpg') center no-repeat;
     background-size: cover;
     overflow: hidden;
     .m-cover{
         width: 70%;
         height: 100%;
-        display: table;  
-        text-align: center;
-        font-family: 'Lato', sans-serif; 
+        display: table;   
         .m-cover-text {
             display: table-cell;
             vertical-align: middle;
@@ -48,32 +61,33 @@ div.g-cover {
             color: #76818d;
             font-size: 20px; 
         }
-        .u-btn{
-            margin: 0 10px; 
-            padding: 10px 16px; 
-            border-radius: 6px;
-            border: 1px solid #76818d;
-            background-color: transparent;
-            color: #76818d;
-            line-height: 1.3333333;
-            font-size: 16px; 
+        
+        a:hover{
+            background-color: $colorTone;
+            color: white;
         }
-
     }
 
 }
 
-$barHeight: 64px;
+.u-btn{
+    margin: 0 10px; 
+    padding: 10px 16px; 
+    border-radius: 6px;
+    border: 1px solid #76818d;
+    background-color: transparent;
+    color: #76818d;
+    line-height: 1.3333333;
+    font-size: 16px; 
+}
 
-#blank{
-	visibility: hidden;
-	height: $barHeight;
-} 
+
 
 div.g-nav {
     height: $barHeight;
+    padding: 0;
     line-height: $barHeight;
-    background-color: #f38d29;
+    background-color: $colorTone;
     color: white;
     .m-nav {
         width: 60%;
@@ -111,8 +125,88 @@ div.g-nav {
     }
 }
 
+div.g-about, div.g-portfolio, div.g-resume, div.g-testimonials{ 
+    background: #fff;
+    background: -webkit-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+    background: -moz-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+    background: -o-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+    background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+}
+
+div.g-about{ 
+    .m-about{ 
+        width: 40%;
+        margin: 0 auto;
+        img {
+            border-radius: 125px;
+        }
+        p{
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-align: justify;
+            a{
+                color: $subColor;
+            }
+        }
+        .m-btn{
+            padding-top: 40px;
+        }
+    }
+}
+
+.u-section{
+    padding: 30px 0;
+    .u-section-title {
+        margin: 0;
+        margin-bottom: 30px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $colorTone;
+        font-weight: 700;
+        font-size: 30px; 
+    }
+
+    .u-line{
+        height: 4px;
+        width: 70px;  
+        background: $subColor;
+        margin: 0 auto;
+        margin-bottom: 30px; 
+    }
+}
+
+
 div.g-services {
-    background-color: #edc896;
+    background: url('../../images/services-bg.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .m-services{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.m-card{
+    margin-top: 40px;
+    font-size: 0;
+    .u-card{
+        font-size: 16px;
+        display: inline-block;
+        width: 25%;
+        i{
+            margin-bottom: 20px;
+            color: $colorTone;
+        }
+        h4 {
+            padding: 10px 0;
+            color: $subColor;
+        }
+
+        p{
+            font-size: 14px;
+        }
+        
+    }
 }
 
 div.g-portfolio {
@@ -120,11 +214,19 @@ div.g-portfolio {
 }
 
 div.g-skills {
-    background-color: #7dc9eb;
+    background: url('../../images/skills-bg.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div.g-resume {
     background-color: #fddbac;
+}
+
+div.g-achievements{
+    background: url('../../images/achievements-bg.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 div.g-testimonials {
@@ -132,5 +234,7 @@ div.g-testimonials {
 }
 
 div.g-contact {
-    background-color: #c995eb;
+    background: url('../../images/contact-bg.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }

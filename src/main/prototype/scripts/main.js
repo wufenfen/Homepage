@@ -18,13 +18,13 @@ $(document).ready(function(){
  	isFixBar();
 
  	function isFixBar(){
- 		if( window.scrollY > cover.height() ){
+ 		if( $(window).scrollTop() > cover.height() ){
 			navBar.addClass('navFixed');
-			$('#blank').css('visibility','visible');//make the about region the same value
+			$('#blank').css('display','block');//make the about region the same value
 		}
 		else{
 			navBar.removeClass('navFixed');
-			$('#blank').css('visibility','hidden');
+			$('#blank').css('display','none');
 		}
  	}
 
@@ -40,7 +40,7 @@ $(document).ready(function(){
 			var target = $('#' + id); 
 
 			$('html, body').stop().animate({
-		        'scrollTop': target.offset().top
+		        'scrollTop': target.offset().top - 64
 		    }, 500, 'linear');
 		} 
 		highlightNar();
@@ -67,7 +67,7 @@ $(document).ready(function(){
 			return;
 		}
 
-		if( window.scrollY >= start.offset().top + start.height() && window.scrollY < end.offset().top + end.height()){
+		if( $(window).scrollTop() >= start.offset().top + start.height() && $(window).scrollTop() < end.offset().top + end.height()){
 			$(select).addClass('hover');
 		}
 		else{
