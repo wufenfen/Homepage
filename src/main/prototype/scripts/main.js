@@ -1,12 +1,5 @@
 $(document).ready(function(){ 
-	var cover = $('#cover');
-	/*var about = $('#about');
-	var services = $('#services');
-	var portfolio = $('#portfolio');
-	var skills = $('#skills');
-	var resume = $('#resume');
-	var testimonials = $('#testimonials');
-	var contact = $('#contact');*/
+	var cover = $('#cover'); 
 	var content = ['cover', 'about','services','portfolio','skills','resume','testimonials','contact'];
 	var $content = [];
 	$(content).each(function(i,item){ 
@@ -14,11 +7,12 @@ $(document).ready(function(){
 	})
 
 	var navBar = $('#nav');  
+	var navBarHeight = navBar.height();
 
- 	isFixBar();
-
- 	function isFixBar(){
- 		if( $(window).scrollTop() > cover.height() ){
+ 	function fixNavBar(){
+ 		//fixed the bug when navbar change from static to fixed
+ 		var height = navBar.css('position') == 'fixed'? 0: navBarHeight;
+ 		if( $(window).scrollTop() > cover.height() + height){
 			navBar.addClass('navFixed');
 			$('#blank').css('display','block');//make the about region the same value
 		}
@@ -28,38 +22,8 @@ $(document).ready(function(){
 		}
  	}
 
-	$(window).scroll(function(){
-		isFixBar();
-		highlightNar();
-	})
-
-	$('.m-nav, .m-cover').click(function(e){
-		var href = e.target.href;
-		if( href){
-			var id= href.split('#')[1];
-			var target = $('#' + id); 
-
-			$('html, body').stop().animate({
-		        'scrollTop': target.offset().top - 64
-		    }, 500, 'linear');
-		} 
-		highlightNar();
-	})
-
-	function highlightNar(){ 
-		for (var i = 0; i < $content.length-1; i++) { 
-			comparePosition($content[i], $content[i+1], content[i+1]);
-		}; 
-		//hack when the contact height is not larger than the window height
-		if( $(window).scrollTop() + $(window).height() == $(document).height() ) {
-	       $("#contact").addClass('hover');
-	       $("#testimonials").removeClass('hover');
-	   }
-	}
-
-	function comparePosition(start, end, target){
+	function isHighlight(start, end, target){
 		var select = 'a[href="#'+ target  + '"]';
-
 		//hightlight only when the element is static
 		var isAnimating = $("html, body").is(':animated'); 
 		if(isAnimating){
@@ -74,4 +38,33 @@ $(document).ready(function(){
 			$(select).removeClass('hover');
 		}
 	}
+
+	function highlightNar(){ 
+		for (var i = 0; i < $content.length-1; i++) { 
+			isHighlight($content[i], $content[i+1], content[i+1]);
+		};  
+	}
+
+
+
+ 	fixNavBar();
+
+	$(window).scroll(function(){
+		fixNavBar();
+		highlightNar();
+	})
+
+	$('.m-nav, .m-cover').click(function(e){
+		var href = e.target.href;
+		if( href){
+			var id= href.split('#')[1];
+			var target = $('#' + id); 
+			console.log(target.offset().top - navBarHeight);
+			$('html, body').stop().animate({
+		        'scrollTop': target.offset().top - navBarHeight
+		    }, 500, 'linear');
+		} 
+		highlightNar();
+	})
+ 
 })
