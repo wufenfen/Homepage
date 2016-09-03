@@ -11,6 +11,7 @@ body > div {
 
 .navFixed {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   right: 0; }
@@ -30,8 +31,9 @@ div.g-cover {
   background-size: cover;
   overflow: hidden; }
   div.g-cover .m-cover {
-    width: 70%;
+    width: 60%;
     height: 100%;
+    margin-left: 5%;
     display: table; }
     div.g-cover .m-cover .m-cover-text {
       display: table-cell;
@@ -92,7 +94,10 @@ div.g-nav {
           line-height: 64px;
           letter-spacing: 1px; }
 
-div.g-about, div.g-portfolio, div.g-resume, div.g-testimonials {
+div.g-about,
+div.g-portfolio,
+div.g-resume,
+div.g-testimonials {
   background: #fff;
   background: -webkit-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
   background: -moz-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
@@ -135,16 +140,18 @@ div.g-services {
   background-size: cover;
   background-attachment: fixed; }
   div.g-services .m-services {
-    width: 80%;
+    width: 60%;
     margin: 0 auto; }
 
 .m-card {
   margin-top: 40px;
   font-size: 0; }
   .m-card .u-card {
-    font-size: 16px;
+    width: 25%;
+    padding: 0 15px;
+    box-sizing: border-box;
     display: inline-block;
-    width: 25%; }
+    font-size: 16px; }
     .m-card .u-card i {
       margin-bottom: 20px;
       color: #2c3e50; }
@@ -154,8 +161,61 @@ div.g-services {
     .m-card .u-card p {
       font-size: 14px; }
 
-div.g-portfolio {
-  background-color: pink; }
+div.g-portfolio .m-portfolio {
+  width: 60%;
+  margin: 0 auto; }
+  div.g-portfolio .m-portfolio .m-type {
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    font-size: 0; }
+    div.g-portfolio .m-portfolio .m-type li {
+      display: inline-block;
+      width: 25%;
+      font-size: 14px;
+      border-right: 1px solid #616e7c;
+      box-sizing: border-box; }
+      div.g-portfolio .m-portfolio .m-type li a {
+        color: #616e7c; }
+        div.g-portfolio .m-portfolio .m-type li a:hover {
+          color: #E87E04; }
+    div.g-portfolio .m-portfolio .m-type li:last-child {
+      border: none; }
+div.g-portfolio .m-portPics > div {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px; }
+  div.g-portfolio .m-portPics > div .u-images {
+    overflow: hidden; }
+  div.g-portfolio .m-portPics > div a {
+    display: inline-block; }
+    div.g-portfolio .m-portPics > div a img, div.g-portfolio .m-portPics > div a .u-images-context {
+      transition: all 1s ease-in-out; }
+    div.g-portfolio .m-portPics > div a:hover .u-images-context {
+      opacity: 0.7; }
+    div.g-portfolio .m-portPics > div a:hover img {
+      transform: scale(1.3); }
+  div.g-portfolio .m-portPics > div img {
+    width: 100%; }
+div.g-portfolio .u-images-context {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  opacity: 0;
+  background-color: #000000;
+  color: white;
+  transition-property: opacity; }
+  div.g-portfolio .u-images-context .title {
+    font-size: 20px;
+    margin-top: 25%;
+    margin-bottom: 5%; }
+  div.g-portfolio .u-images-context .type {
+    margin-bottom: 10%; }
+  div.g-portfolio .u-images-context i {
+    color: #E87E04; }
 
 div.g-skills {
   background: url("../../images/skills-bg.jpg") center no-repeat;
