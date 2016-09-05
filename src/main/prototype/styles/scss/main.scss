@@ -11,6 +11,23 @@ body > div {
     text-align: center;
 }
 
+div.g-about,
+div.g-portfolio,
+div.g-resume,
+div.g-testimonials {
+    background: #fff;
+    background: -webkit-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+    background: -moz-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+    background: -o-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+    background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+}
+
+.m-nav, .m-about, .m-services, .m-portfolio, .m-skills, .m-resume, .m-testimonials, .m-contact {
+    margin: 0 auto;
+    width: 60%;
+    min-width: 1000px;
+}
+
 $colorTone: #2c3e50;
 $subColor: #E87E04;
 $barHeight: 64px;
@@ -85,10 +102,7 @@ div.g-nav {
     line-height: $barHeight;
     background-color: $colorTone;
     color: white;
-    .m-nav {
-        width: $contentWidth;
-        min-width: 1000px;
-        margin: 0 auto;
+    .m-nav { 
         overflow: hidden;
         .name {
             float: left;
@@ -119,29 +133,18 @@ div.g-nav {
         }
     }
 }
-
-div.g-about,
-div.g-portfolio,
-div.g-resume,
-div.g-testimonials {
-    background: #fff;
-    background: -webkit-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-    background: -moz-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-    background: -o-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-    background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-}
-
+ 
 div.g-about {
     .m-about {
-        width: 40%;
-        margin: 0 auto;
+        width: 40%; 
         img {
             border-radius: 125px;
         }
         p {
-            margin-top: 20px;
-            margin-bottom: 30px;
-            text-align: justify;
+                width: 60%;
+                margin: 0 auto;
+                padding-top: 20px; 
+                text-align: justify;
             a {
                 color: $subColor;
             }
@@ -175,11 +178,7 @@ div.g-about {
 div.g-services {
     background: url('../../images/services-bg.jpg') center no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    .m-services {
-        width: $contentWidth;
-        margin: 0 auto;
-    }
+    background-attachment: fixed; 
 }
 
 .m-card {
@@ -206,9 +205,7 @@ div.g-services {
 }
 
 div.g-portfolio {
-    .m-portfolio {
-        width: $contentWidth;
-        margin: 0 auto;
+    .m-portfolio { 
         .m-type {
             width: 600px;
             margin: 0 auto;
@@ -289,10 +286,39 @@ div.g-skills {
     background: url('../../images/skills-bg.jpg') center no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    .m-skills{ 
+        .m-charts{  
+            font-size: 0;
+        }
+        .m-chart{
+            width: 33.3%;
+            display: inline-block;
+        }
+        .u-chart { 
+            position: relative;
+            display: inline-block;
+        }
+        .skillName{
+            color: #E87E04;
+            padding: 30px 0;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .percent {
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-43%, -50%);
+            font-size: 20px;
+        }
+    }
 }
 
 div.g-resume {
-    background-color: #fddbac;
+    .m-resume{
+
+    }
 }
 
 div.g-achievements {
@@ -310,3 +336,5 @@ div.g-contact {
     background-size: cover;
     background-attachment: fixed;
 }
+
+

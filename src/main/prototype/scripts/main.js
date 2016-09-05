@@ -64,7 +64,7 @@ $(document).ready(function() {
         highlightNar();
     })
 
-
+    //portfolio: Isotope images
     // init Isotope
     var $Pics = $('.m-portPics').isotope({
         transitionDuration: '0.8s',
@@ -79,7 +79,22 @@ $(document).ready(function() {
         $(e.target).addClass('hover');
     });
 
-
+    //portfolio: prettyPhoto
     $(".u-images a[rel^='prettyPhoto']").prettyPhoto({ animation_speed: 'normal', theme: 'light_square', slideshow: 3000, autoplay_slideshow: true });
 
+    //skills: easy pie chart 
+    $('.u-chart').easyPieChart({
+        easing: 'easeOutElastic',
+        delay: 3000,
+        barColor: '#2c3e50',
+        trackColor: '#fff',
+        scaleColor: false,
+        lineWidth: 10,
+        trackWidth: 10,
+        lineCap: 'square',
+        size: 150 ,
+        onStep: function(from, to, percent) {
+                this.el.children[0].innerHTML = Math.round(percent) + '%';
+            }
+    });
 })

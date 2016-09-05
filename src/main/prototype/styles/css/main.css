@@ -9,6 +9,21 @@ body > div {
   padding: 80px 0;
   text-align: center; }
 
+div.g-about,
+div.g-portfolio,
+div.g-resume,
+div.g-testimonials {
+  background: #fff;
+  background: -webkit-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+  background: -moz-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+  background: -o-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
+  background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%); }
+
+.m-nav, .m-about, .m-services, .m-portfolio, .m-skills, .m-resume, .m-testimonials, .m-contact {
+  margin: 0 auto;
+  width: 60%;
+  min-width: 1000px; }
+
 .navFixed {
   position: fixed;
   z-index: 100;
@@ -70,9 +85,6 @@ div.g-nav {
   background-color: #2c3e50;
   color: white; }
   div.g-nav .m-nav {
-    width: 60%;
-    min-width: 1000px;
-    margin: 0 auto;
     overflow: hidden; }
     div.g-nav .m-nav .name {
       float: left;
@@ -94,24 +106,14 @@ div.g-nav {
           line-height: 64px;
           letter-spacing: 1px; }
 
-div.g-about,
-div.g-portfolio,
-div.g-resume,
-div.g-testimonials {
-  background: #fff;
-  background: -webkit-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-  background: -moz-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-  background: -o-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
-  background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%); }
-
 div.g-about .m-about {
-  width: 40%;
-  margin: 0 auto; }
+  width: 40%; }
   div.g-about .m-about img {
     border-radius: 125px; }
   div.g-about .m-about p {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 20px;
     text-align: justify; }
     div.g-about .m-about p a {
       color: #E87E04; }
@@ -139,9 +141,6 @@ div.g-services {
   background: url("../../images/services-bg.jpg") center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-  div.g-services .m-services {
-    width: 60%;
-    margin: 0 auto; }
 
 .m-card {
   margin-top: 40px;
@@ -161,26 +160,23 @@ div.g-services {
     .m-card .u-card p {
       font-size: 14px; }
 
-div.g-portfolio .m-portfolio {
-  width: 60%;
-  margin: 0 auto; }
-  div.g-portfolio .m-portfolio .m-type {
-    width: 600px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-    font-size: 0; }
-    div.g-portfolio .m-portfolio .m-type li {
-      display: inline-block;
-      width: 25%;
-      font-size: 14px;
-      border-right: 1px solid #616e7c;
-      box-sizing: border-box; }
-      div.g-portfolio .m-portfolio .m-type li a {
-        color: #616e7c; }
-        div.g-portfolio .m-portfolio .m-type li a:hover {
-          color: #E87E04; }
-    div.g-portfolio .m-portfolio .m-type li:last-child {
-      border: none; }
+div.g-portfolio .m-portfolio .m-type {
+  width: 600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  font-size: 0; }
+  div.g-portfolio .m-portfolio .m-type li {
+    display: inline-block;
+    width: 25%;
+    font-size: 14px;
+    border-right: 1px solid #616e7c;
+    box-sizing: border-box; }
+    div.g-portfolio .m-portfolio .m-type li a {
+      color: #616e7c; }
+      div.g-portfolio .m-portfolio .m-type li a:hover {
+        color: #E87E04; }
+  div.g-portfolio .m-portfolio .m-type li:last-child {
+    border: none; }
 div.g-portfolio .m-portPics > div {
   float: left;
   width: 25%;
@@ -221,9 +217,25 @@ div.g-skills {
   background: url("../../images/skills-bg.jpg") center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-
-div.g-resume {
-  background-color: #fddbac; }
+  div.g-skills .m-skills .m-charts {
+    font-size: 0; }
+  div.g-skills .m-skills .m-chart {
+    width: 33.3%;
+    display: inline-block; }
+  div.g-skills .m-skills .u-chart {
+    position: relative;
+    display: inline-block; }
+  div.g-skills .m-skills .skillName {
+    color: #E87E04;
+    padding: 30px 0;
+    font-weight: 600;
+    font-size: 18px; }
+  div.g-skills .m-skills .percent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-43%, -50%);
+    font-size: 20px; }
 
 div.g-achievements {
   background: url("../../images/achievements-bg.jpg") center no-repeat;
