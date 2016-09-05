@@ -22,7 +22,7 @@ div.g-testimonials {
     background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
 }
 
-.m-nav, .m-about, .m-services, .m-portfolio, .m-skills, .m-resume, .m-testimonials, .m-contact {
+.m-nav, .m-about, .m-services, .m-portfolio, .m-skills, .m-resume, .m-achievements, .m-testimonials, .m-contact {
     margin: 0 auto;
     width: 60%;
     min-width: 1000px;
@@ -194,12 +194,26 @@ div.g-services {
             margin-bottom: 20px;
             color: $colorTone;
         }
+
+        .z-stats{
+            color: $subColor;
+        }
+
         h4 {
             padding: 10px 0;
             color: $subColor;
         }
         p {
             font-size: 14px;
+        }
+        .type{
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .data {
+            font-size: 40px;
+            font-weight: bolder; 
+            color: $colorTone;        
         }
     }
 }
@@ -317,7 +331,62 @@ div.g-skills {
 
 div.g-resume {
     .m-resume{
+        .timeline{
+            position: relative;
 
+            &:before{
+                content: '';
+                border: 1px solid #d2d2d2;
+                width: 0;
+                height: 100%;
+                position: absolute;
+                z-index: 0;
+
+            }
+        }
+
+        li{
+            text-align: center;
+            margin-bottom: 90px;
+        }
+
+        .desc{
+            width: 40%;
+            position: absolute;
+
+            .company{
+                font-size: 20px;
+            }
+            .job {
+                font-size: 18px;
+                color: $subColor;
+                padding: 10px 0;
+            } 
+        }
+
+        .z-left{
+            left: 0;
+            text-align: right; 
+        }
+
+        .z-right {
+            right: 0;
+            text-align: left;
+        }
+
+        .u-time{ 
+            width: 150px;
+            height: 150px;
+            z-index: 1;
+            position: relative;
+            background-color: white;
+            border-radius: 75px; 
+            display: inline-block; 
+            font-size: 16px;
+            p:first-child{
+                padding-top: 40px;
+            }
+        }
     }
 }
 

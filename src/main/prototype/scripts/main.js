@@ -97,4 +97,12 @@ $(document).ready(function() {
                 this.el.children[0].innerHTML = Math.round(percent) + '%';
             }
     });
+
+
+    //some stats: counter up
+    $('.data').counterUp({ 
+        delay: 10, // the delay time in ms 
+        time: 1000 // the speed time in ms 
+    });
+
 })

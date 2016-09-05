@@ -19,7 +19,7 @@ div.g-testimonials {
   background: -o-linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%);
   background: linear-gradient(#fff 0, #e7e7e7 50%, #fff 100%); }
 
-.m-nav, .m-about, .m-services, .m-portfolio, .m-skills, .m-resume, .m-testimonials, .m-contact {
+.m-nav, .m-about, .m-services, .m-portfolio, .m-skills, .m-resume, .m-achievements, .m-testimonials, .m-contact {
   margin: 0 auto;
   width: 60%;
   min-width: 1000px; }
@@ -154,11 +154,20 @@ div.g-services {
     .m-card .u-card i {
       margin-bottom: 20px;
       color: #2c3e50; }
+    .m-card .u-card .z-stats {
+      color: #E87E04; }
     .m-card .u-card h4 {
       padding: 10px 0;
       color: #E87E04; }
     .m-card .u-card p {
       font-size: 14px; }
+    .m-card .u-card .type {
+      text-transform: uppercase;
+      font-weight: bold; }
+    .m-card .u-card .data {
+      font-size: 40px;
+      font-weight: bolder;
+      color: #2c3e50; }
 
 div.g-portfolio .m-portfolio .m-type {
   width: 600px;
@@ -236,6 +245,45 @@ div.g-skills {
     left: 50%;
     transform: translate(-43%, -50%);
     font-size: 20px; }
+
+div.g-resume .m-resume .timeline {
+  position: relative; }
+  div.g-resume .m-resume .timeline:before {
+    content: '';
+    border: 1px solid #d2d2d2;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    z-index: 0; }
+div.g-resume .m-resume li {
+  text-align: center;
+  margin-bottom: 90px; }
+div.g-resume .m-resume .desc {
+  width: 40%;
+  position: absolute; }
+  div.g-resume .m-resume .desc .company {
+    font-size: 20px; }
+  div.g-resume .m-resume .desc .job {
+    font-size: 18px;
+    color: #E87E04;
+    padding: 10px 0; }
+div.g-resume .m-resume .z-left {
+  left: 0;
+  text-align: right; }
+div.g-resume .m-resume .z-right {
+  right: 0;
+  text-align: left; }
+div.g-resume .m-resume .u-time {
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  position: relative;
+  background-color: white;
+  border-radius: 75px;
+  display: inline-block;
+  font-size: 16px; }
+  div.g-resume .m-resume .u-time p:first-child {
+    padding-top: 40px; }
 
 div.g-achievements {
   background: url("../../images/achievements-bg.jpg") center no-repeat;
