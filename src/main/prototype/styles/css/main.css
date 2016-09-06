@@ -290,8 +290,13 @@ div.g-achievements {
   background-size: cover;
   background-attachment: fixed; }
 
-div.g-testimonials {
-  background-color: #ceeb57; }
+div.g-testimonials .m-testimonials img {
+  width: 100px;
+  border-radius: 50px; }
+div.g-testimonials .m-testimonials p {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px; }
 
 div.g-contact {
   background: url("../../images/contact-bg.jpg") center no-repeat;

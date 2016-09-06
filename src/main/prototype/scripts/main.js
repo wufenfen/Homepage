@@ -105,4 +105,9 @@ $(document).ready(function() {
         time: 1000 // the speed time in ms 
     });
 
+    //testimonials: 轮播图
+    $('.my-slider').unslider({
+        arrows: false,
+        autoplay: true
+    });
 })

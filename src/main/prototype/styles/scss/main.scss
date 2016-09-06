@@ -397,7 +397,18 @@ div.g-achievements {
 }
 
 div.g-testimonials {
-    background-color: #ceeb57;
+    .m-testimonials {
+        img {
+            width: 100px;
+            border-radius: 50px;
+        }
+        
+        p{
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    }
 }
 
 div.g-contact {
