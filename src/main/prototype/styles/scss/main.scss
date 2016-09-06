@@ -50,6 +50,14 @@ $contentWidth: 60%;
     height: $barHeight;
 }
 
+
+.clearfont{  
+    font-size: 0;
+    .onethird {
+        width: 33.3%;
+        display: inline-block;
+    }
+}
 div.g-cover {
     height: 100%;
     padding: 0;
@@ -301,13 +309,6 @@ div.g-skills {
     background-size: cover;
     background-attachment: fixed;
     .m-skills{ 
-        .m-charts{  
-            font-size: 0;
-        }
-        .m-chart{
-            width: 33.3%;
-            display: inline-block;
-        }
         .u-chart { 
             position: relative;
             display: inline-block;
@@ -402,7 +403,7 @@ div.g-testimonials {
             width: 100px;
             border-radius: 50px;
         }
-        
+
         p{
             width: 60%;
             margin: 0 auto;
@@ -415,6 +416,37 @@ div.g-contact {
     background: url('../../images/contact-bg.jpg') center no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    .z-white{
+        color: white;
+    }
+    .con-text{
+        margin-bottom: 35px;
+    }
+    .onethird{
+        font-size: 14px;
+        vertical-align: top;
+        p {
+            margin-top: 10px;
+        }
+    }
+    .m-contact{ 
+        color: white;
+        .contain{
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
 }
 
 
+footer {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #001934;
+    i {
+        color: white;
+        vertical-align: middle;
+    }
+}

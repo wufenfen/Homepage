@@ -39,6 +39,12 @@ div.g-testimonials {
   display: none;
   height: 64px; }
 
+.clearfont {
+  font-size: 0; }
+  .clearfont .onethird {
+    width: 33.3%;
+    display: inline-block; }
+
 div.g-cover {
   height: 100%;
   padding: 0;
@@ -226,11 +232,6 @@ div.g-skills {
   background: url("../../images/skills-bg.jpg") center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
-  div.g-skills .m-skills .m-charts {
-    font-size: 0; }
-  div.g-skills .m-skills .m-chart {
-    width: 33.3%;
-    display: inline-block; }
   div.g-skills .m-skills .u-chart {
     position: relative;
     display: inline-block; }
@@ -302,5 +303,29 @@ div.g-contact {
   background: url("../../images/contact-bg.jpg") center no-repeat;
   background-size: cover;
   background-attachment: fixed; }
+  div.g-contact .z-white {
+    color: white; }
+  div.g-contact .con-text {
+    margin-bottom: 35px; }
+  div.g-contact .onethird {
+    font-size: 14px;
+    vertical-align: top; }
+    div.g-contact .onethird p {
+      margin-top: 10px; }
+  div.g-contact .m-contact {
+    color: white; }
+    div.g-contact .m-contact .contain {
+      width: 70%;
+      margin: 0 auto; }
+
+footer {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: white;
+  background-color: #001934; }
+  footer i {
+    color: white;
+    vertical-align: middle; }
 
 /*# sourceMappingURL=main.css.map */
