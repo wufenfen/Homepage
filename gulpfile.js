@@ -11,7 +11,6 @@ var livereload = require('gulp-livereload'),
     express = require('express'),
     openurl = require('openurl');
 
-
 var config = require('./shark-deploy-conf.json');
 
 var appConfig = config;
