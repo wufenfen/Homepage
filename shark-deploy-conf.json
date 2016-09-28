@@ -6,7 +6,7 @@
     "port": 8021,
     "hostname" : "localhost",
     "openurl" : "http://localhost:8021/index.html",
-    "webapp": "src/main/webapp",
+    "webapp": "src/main/prototype",
     "mock" : "src/test/mock",
     "scssPath" : "/styles/scss",
     "cssPath" : "/styles/css",

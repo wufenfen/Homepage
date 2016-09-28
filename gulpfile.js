@@ -1,4 +1,9 @@
 var gulp = require('gulp'),
+    gulpif = require('gulp-if'),
+    clean = require('gulp-clean'),
+    mincss = require('gulp-mini-css'),
+    uglify = require('gulp-uglify'),
+    concat = require('gulp-concat'),
     fs = require('fs'),
     path = require('path');
 
@@ -12,8 +17,20 @@ var config = require('./shark-deploy-conf.json');
 var appConfig = config;
 // webapp
 var webappDir = appConfig.webapp;
-
-
+// mock dir
+var mockDir = appConfig.mock;
+// build dir
+var buildDir = appConfig.build;
+var buildWebappDir = path.join(buildDir, appConfig.buildWebapp);
+var buildStaticDir = path.join(buildDir, appConfig.buildStatic);
+// path
+var cssPath = appConfig.cssPath;
+var imgPath = appConfig.imgPath;
+var jsPath = appConfig.jsPath;
+var htmlPath = appConfig.htmlPath;
+var ajaxPath = appConfig.ajaxPrefix;
+var scssPath = appConfig.scssPath;
+ 
 function findAllPagejs(html) {
     var reg = /src=['"](\/js\/[a-z,A-Z,0-9,\/]+\.page\.js)["']/g;
     var list = [];
@@ -96,6 +113,24 @@ function headerStatic(staticPath, headers) {
     }
 }
 
+gulp.task('clean', function() {
+    return  gulp.src(buildDir,{read: false})
+        .pipe(clean());
+});
+
+gulp.task('mincss', ['clean'], function(){
+    gulp.src(path.join(webappDir, cssPath,'**'))
+        .pipe(gulpif('*.map', mincss())) //压缩css
+        .pipe(concat('all.min.css'))//合并css
+        .pipe(gulp.dest(path.join(buildWebappDir,cssPath)));
+})
+
+gulp.task('minjs',['mincss'],function(){
+    gulp.src(path.join(webappDir, jsPath, '**'))
+        .pipe(uglify()) //压缩js
+        .pipe(concat('all.min.js'))//合并js
+        .pipe(gulp.dest( path.join(buildWebappDir,jsPath)));
+})
 gulp.task('default', function(){
     console.log("gulp successfully runs~~~");
 });
