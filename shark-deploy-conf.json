@@ -25,4 +25,5 @@
     "projectConfigFile" : "",
     "projectDistConfigFile" : "",
     "ajaxPrefix" : "/xhr"
+    
 }
