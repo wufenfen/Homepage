@@ -92,7 +92,7 @@ div.g-nav {
   color: white; }
   div.g-nav .m-nav {
     overflow: hidden; 
-    height: 750px;}
+    }
     div.g-nav .m-nav .name {
       float: left;
       font-size: 20px;
