@@ -5,7 +5,10 @@ $(document).ready(function() {
     $(content).each(function(i, item) {
         $content[i] = $('#' + item);
     });
-
+    var $Pics = $('.m-portPics').isotope({
+        transitionDuration: '0.8s',
+        social_tools:''
+    });
     var navBar = $('#nav');
     var navBarHeight = navBar.height();
 
@@ -66,10 +69,6 @@ $(document).ready(function() {
 
     //portfolio: Isotope images
     // init Isotope
-    var $Pics = $('.m-portPics').isotope({
-        transitionDuration: '0.8s',
-        social_tools:''
-    });
     $Pics.isotope({ filter: '*' });
     // filter items on click
     $('.j-filter-group').click (function(e) {
