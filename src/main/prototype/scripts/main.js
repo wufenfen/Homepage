@@ -70,6 +70,7 @@ $(document).ready(function() {
         transitionDuration: '0.8s',
         social_tools:''
     });
+    $Pics.isotope({ filter: '*' });
     // filter items on click
     $('.j-filter-group').click (function(e) {
         $('.j-filter-group .hover').removeClass('hover');
