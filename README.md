@@ -1,7 +1,11 @@
-# Homepage
-My personal homepage 我的个人主页
+# 个人主页
 
-https://wufenfen.github.io/Homepage/src/main/prototype  
+那年我还不知道前端，只听说过页面开发。看了些 HTML、CSS 之后，就自己折腾出了一个业余的[个人网站](https://wufenfen.github.io/Homepage/personal)。虽然现在看来非常幼稚，内容都是非常真实非常有意义的，这个作品从设计到内容到编码都让我成就感满满。
 
+后来看到一个很好看的简历模板，就拿着模板胡乱修改了一通，变成[自己的简历](https://wufenfen.github.io/Homepage/src/main/prototype)。其实都还没写好。。。
 
+感悟就是以前做过的事，到了以后都非常具有纪念意义。喜欢那个时候瞎折腾的自己，满满的激情和能量。
 
+希望自己在当下不管多么困难，也要坚持。以后再回首，也会很感动当年的辛苦。
+
+更新于完成 5 年后 2019.02.12 小聆一
